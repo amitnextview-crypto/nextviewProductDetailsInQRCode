@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Nextview Product Catalog</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ICON LIBRARY -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+/* ===== GLOBAL ===== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ===== POPUP / MODAL ===== */
+.modal {
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+}
+
+.modal-content {
+  width: 100%;
+  max-width: 420px;
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 20px;
+  animation: slideUp 0.4s ease;
+}
+
+/* ===== HEADER ===== */
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  font-size: 20px;
+  margin: 0;
+  color: #1f3c88;
+}
+
+.header p {
+  font-size: 14px;
+  color: #666;
+  margin-top: 6px;
+}
+
+/* ===== PRODUCT LIST ===== */
+.product {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f7f9fc;
+  padding: 14px;
+  margin-bottom: 12px;
+  border-radius: 12px;
+  transition: 0.2s;
+}
+
+.product:hover {
+  background: #eef2ff;
+}
+
+/* LEFT SIDE */
+.product-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.icon {
+  font-size: 22px;
+  color: #1f3c88;
+}
+
+.product-name {
+  font-size: 15px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* DOWNLOAD BUTTON */
+.download-btn {
+  text-decoration: none;
+  background: linear-gradient(135deg, #1f3c88, #3a6df0);
+  color: #fff;
+  font-size: 13px;
+  padding: 8px 14px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+/* ===== MOBILE FIRST ===== */
+@media (max-width: 480px) {
+  .modal-content {
+    max-width: 100%;
+    height: auto;
+    border-radius: 16px;
+  }
+
+  .header h1 {
+    font-size: 18px;
+  }
+
+  .product-name {
+    font-size: 14px;
+  }
+}
+
+/* ===== ANIMATION ===== */
+@keyframes slideUp {
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="modal">
+  <div class="modal-content">
+
+    <div class="header">
+      <h1>Nextview Technologies Pvt Ltd</h1>
+      <p>Select product to download PDF</p>
+    </div>
+
+    <!-- PRODUCTS -->
+    <div class="product">
+      <div class="product-left">
+        <i class="fa-solid fa-tv icon"></i>
+        <div class="product-name">Smart TV</div>
+      </div>
+      <a class="download-btn" href="pdf/NextView TV MRP only.pdf" download>Download PDF</a>
+    </div>
+
+    <div class="product">
+      <div class="product-left">
+        <i class="fa-solid fa-display icon"></i>
+        <div class="product-name">Digital Signage</div>
+      </div>
+      <a class="download-btn" href="pdf/Price List_Standee.pdf" download>Download PDF</a>
+    </div>
+
+    <div class="product">
+      <div class="product-left">
+        <i class="fa-solid fa-droplet icon"></i>
+        <div class="product-name">Water Purifier</div>
+      </div>
+      <a class="download-btn" href="pdf/Price List_Standee.pdf" download>Download PDF</a>
+    </div>
+
+    <div class="product">
+      <div class="product-left">
+        <i class="fa-solid fa-volume-high icon"></i>
+        <div class="product-name">Speaker</div>
+      </div>
+      <a class="download-btn" href="pdf/Price List_Standee.pdf" download>Download PDF</a>
+    </div>
+
+    <div class="product">
+      <div class="product-left">
+        <i class="fa-solid fa-snowflake icon"></i>
+        <div class="product-name">Air Conditioner</div>
+      </div>
+      <a class="download-btn" href="pdf/Price List_Standee.pdf" download>Download PDF</a>
+    </div>
+
+    <div class="product">
+      <div class="product-left">
+        <i class="fa-solid fa-video icon"></i>
+        <div class="product-name">CCTV Camera</div>
+      </div>
+      <a class="download-btn" href="pdf/Price List_Standee.pdf" download>Download PDF</a>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>
